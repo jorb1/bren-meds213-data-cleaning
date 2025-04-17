@@ -31,4 +31,59 @@ snow |>
   count(Land_cover)
 ```
 
-*Both snow and land cover have interesting inputs, since as the "-" and ".". These are similar problems to the snow cover data, that we cleaned in class. So, lets do the same things here that we did there, and get this data all cleaned up and ready to use!*
+*Both snow and land cover have interesting inputs, since as the "-" and ".". Plus, they are showing up as <chr>, even though they should be numeric. These are similar problems to the snow cover data, that we cleaned in class. So, lets do the same things here that we did there, and get this data all cleaned up and ready to use!*
+
+```{r}
+# Look at all of the funky symbols for water cover
+snow |> 
+  count(Water_cover) |> 
+  filter(is.na(as.numeric(Water_cover)))
+```
+```{r}
+# Look at all of the funky symbols for land cover
+snow |> 
+  count(Land_cover) |> 
+  filter(is.na(as.numeric(Land_cover)))
+```
+
+*Lets try and figure out why all of these funky symbols got used*
+
+```{r}
+# View the rows that use the dots
+snow |> 
+  filter(Water_cover == ".") |> 
+  View()
+```
+
+*Ah yes. As I expected. Those rows that use a "." seem to be the rows where all coverage types had a ".". In the snow_cover wrangling, we decided to convert all of these to NAs, as well as the -, n/a, and unk. From the looks of things, I want to do the same thing to the columns here. Imma get a lil fancy with it, to convert both water and land cover funky symbols to NAs, for both land and water*
+
+```{r}
+# Tidyverse will help us clean!
+all_cover_fixed <- snow |> 
+  mutate(across(
+    c(Water_cover, Land_cover), 
+    ~ if_else(.x %in% c(".", "-", "n/a", "unk"), NA_character_, .x)
+  ))
+```
+
+```{r}
+# Lets make sure that worked
+all_cover_fixed |> 
+  count(Water_cover) |> 
+  filter(is.na(as.numeric(Water_cover)))
+```
+*All right! It worked! Now, the values that we assumed to be NA, are actually consistently represented as NA throughout the dataset.*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
