@@ -74,13 +74,72 @@ all_cover_fixed |>
 ```
 *All right! It worked! Now, the values that we assumed to be NA, are actually consistently represented as NA throughout the dataset.*
 
+```{r}
+# Now lets mutate to make the columns numeric
+all_cover_fixed <- all_cover_fixed |> 
+  mutate(Water_cover = as.numeric(Water_cover)) |> 
+  mutate(Land_cover = as.numeric(Land_cover))
+```
 
+### Ok, we have dealt with the funky NA denotations. Now, since we are working with percentages, and assume that total cover should be a sum of these percentages, we want to make sure that our numbers are within an expected range (between 0 and 100)
 
+```{r}
+# Check for numbers over 100
+all_cover_fixed |> 
+  filter(Water_cover > 100)
+```
+```{r}
+# Check for negative numbers
+all_cover_fixed |> 
+  filter(Land_cover <0)
+```
 
+*Ah oh, looks like we have a few numbers outside of our expected ranges. Unfortunately, I have to assume these are errors, and since I can't invent numbers to replace them, I will have to make these NAs as well.*
 
+```{r}
+# Turn negative and over 100 values to NA
+all_cover_fixed <- snow |> 
+  mutate(across(
+    c(Water_cover, Land_cover),
+    ~ if_else(.x > 100 | .x < 0, NA, .x)
+  ))
+```
 
+```{r}
+# Make sure it worked
+all_cover_fixed |> 
+  filter(Land_cover <0)
+```
 
+*Yay, it worked!*
 
+*Now, lets take a look at the Total Cover column...why is it a character column, instead of numeric? Lets make sure there's nothing too crazy going on, before we recalcuate the total coverage*
+
+```{r}
+all_cover_fixed |> 
+  count(Total_cover)
+```
+*Whoops, looks like there is ".", n/a, and "-" here too, as well as this crazy thing: <row r=\\64\\ spans=\\1:11\\ x14ac:dyDescent=\\0.2\\>. Time to do some cleaning of this column, and convert it to numeric*
+
+```{r}
+# Remove funky stuff, then convert to numeric
+all_cover_fixed <- all_cover_fixed |> 
+  mutate(Total_cover = if_else(Total_cover %in% c(".", "-", "n/a", "<row r=\\64\\ spans=\\1:11\\ x14ac:dyDescent=\\0.2\\>"), NA_character_, Total_cover)) |> 
+  mutate(Total_cover = as.numeric(Total_cover))
+```
+
+```{r}
+# Take a lil looksie
+glimpse(all_cover_fixed)
+```
+*Ok, all is numeric now. Getting some numbers higher than 100 though, which doesn't make much sense from a percentage perspective. Odds are, this is because of the overly large numbers that we dealt with in our former cleaning. But, since that's all fixed, we can recalculate the total percentages as the sum of the three cover types, and it should be accurate!*
+
+```{r}
+all_cover_fixed <- all_cover_fixed |> 
+  mutate(Total_cover_clean = rowSums(across(c(Snow_cover, 
+                                              Water_cover, 
+                                              Land_cover)), na.rm = TRUE))
+```
 
 
 
