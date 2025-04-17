@@ -1,0 +1,34 @@
+---
+title: "Data Cleaning - Homework #2"
+author: "Bailey Jørgensen"
+format: html
+editor: source
+execute: 
+  warning: false
+---
+
+```{r}
+# Load libraries
+librarian::shelf(tidyverse, here, janitor)
+```
+
+```{r}
+# Read in snowcover csv
+snow <- read_csv(here("data", "processed", "snow_cover.csv"))
+
+# Take a peek!
+glimpse(snow)
+```
+```{r}
+# Take a look at the counts for water cover
+snow |> 
+  count(Water_cover)
+```
+
+```{r}
+# Take a look at the counts for land cover
+snow |> 
+  count(Land_cover)
+```
+
+*Both snow and land cover have interesting inputs, since as the "-" and ".". These are similar problems to the snow cover data, that we cleaned in class. So, lets do the same things here that we did there, and get this data all cleaned up and ready to use!*
