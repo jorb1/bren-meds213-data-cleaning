@@ -239,7 +239,13 @@ An up-to-date version of data from Barrow/Utqiagvik, including corrected and mor
 
 **4. Missing data codes:**
 
-In 'all_cover_fixed_JORGENSEN.csv', null values are all represented by NA.
+In 'all_cover_fixed_JORGENSEN.csv', null values are all represented by NA. This is a change from the original data, where null values were represented by dashes, periods, unk, n/a, <1, and NA.
+
+**NOTE:** In the cleaning of this data, it was discovered that there were several missing variables. Specifically, there were values missing from the Snow_cover, Water_cover, and Land_cover columns. Since the Total_cover we know is the sum of these variables added to 100 (as the _cover columns represent percentages), some of these missing variables were able to be deduced based on the numbers present in the other columns. In these cases, this data was input. 
+
+There was a few instances where the numbers in one of the _cover columns were greater than 100. In this case, if the real amount of cover was unable to be deduced from the method described above, the number was converted to an NA. This is also true for numbers that were less than one or negative. 
+
+The species data table was, in this exercise, pivoted from wide to long, with numbers converted to a "bird counts" column. This eliminated the excess 0s in that table where no observations were made of a species, making the data easier to work with. 
 
 **5. Specialized formats or other abbreviations used:**
 
