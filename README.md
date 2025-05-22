@@ -74,129 +74,129 @@ For the purposes of exploring the cleaning of the data, the 'raw' folder contain
 
 The data package utilized in this data cleaning analysis is only part of the greater body of data collected at these field sites at these times. Other related data files, housed on the [Arctic Shorebirds Demographics Network page at the NSF Arctic Data Center](https://arcticdata.io/catalog/view/doi:10.18739/A2222R68W), include: 
 
-Arctic_Shorebird_Demographics.xml	
+- Arctic_Shorebird_Demographics.xml	
 
- ASDN_Invert_biomass.csv	 
+- ASDN_Invert_biomass.csv	 
  
- ASDN_Bird_sexes.csv 
+- ASDN_Bird_sexes.csv 
  
- ASDN_protocol_2010.pdf	
+- ASDN_protocol_2010.pdf	
  
- ASDN_Weather_Hobo.csv 
+- ASDN_Weather_Hobo.csv 
  
- ASDN_Bird_nests.csv	
+- ASDN_Bird_nests.csv	
  
- ASDN_Pred_nests.csv 
+- ASDN_Pred_nests.csv 
  
- ASDN_Camp_staff.csv
+- ASDN_Camp_staff.csv
  
- ASDN_Weather_snow_manual.csv
+- ASDN_Weather_snow_manual.csv
  
- ASDN_Weather_precip_manual.csv 
+- ASDN_Weather_precip_manual.csv 
  
- ASDN_protocol_2014.pdf
+- ASDN_protocol_2014.pdf
  
- ASDN_Pred_point_counts.csv	 
+- ASDN_Pred_point_counts.csv	 
  
- ASDN_Daily_species_effort.csv 
+- ASDN_Daily_species_effort.csv 
  
- ASDN_protocol_2012.pdf
+- ASDN_protocol_2012.pdf
  
- ASDN_Lemming_trap.csv
+- ASDN_Lemming_trap.csv
  
- ASDN_Camp_info.csv 
+- ASDN_Camp_info.csv 
  
- ASDN_Lemming_nests.csv	
+- ASDN_Lemming_nests.csv	
  
- ASDN_Daily_pred_lemm.csv
+- ASDN_Daily_pred_lemm.csv
  
- ASDN_Snow_survey.csv 
+- ASDN_Snow_survey.csv 
  
- ASDN_Bird_captures.csv	 
+- ASDN_Bird_captures.csv	 
  
- ASDN_Surface_water.csv	 
+- ASDN_Surface_water.csv	 
  
- ASDN_protocol_2013.pdf
+- ASDN_protocol_2013.pdf
  
- ASDN_protocol_2011.pdf	
+- ASDN_protocol_2011.pdf	
  
- 01_ASDN_Readme.txt
+- 01_ASDN_Readme.txt
  
- ASDN_Geodata.csv
+- ASDN_Geodata.csv
  
- ASDN_Bird_eggs.csv
+- ASDN_Bird_eggs.csv
  
- ASDN_Lemming_counts.csv
+- ASDN_Lemming_counts.csv
  
- ASDN_Bird_resights.csv 
+- ASDN_Bird_resights.csv 
  
- ASDN_Daily_species.csv
+- ASDN_Daily_species.csv
 
 Due to the ongoing analysis by multiple people of this data, it is the recommendation of the Arctic Shorebird Demographics Network that "Potential users of these data should first contact the relevant data author(s), listed below.  This will enable coordination in terms of updates/corrections to the data and ongoing analyses.  Key analyses of the data are in progress and will be included in the theses and dissertations of graduate students who collected these field data." These authors would be abreast with any current updates that may not currently be part of this dataset. The data housed in this repository contains data from all of the sites managed by the researchers below. These authors are: 
 
-Barrow
-	Rick Lanctot (richard_lanctot@fws.gov)
-	Sarah Saalfeld (sarah_saalfeld@fws.gov)
+- Barrow
+	- Rick Lanctot (richard_lanctot@fws.gov)
+	- Sarah Saalfeld (sarah_saalfeld@fws.gov)
 	
-Burntpoint
-	Rod Brook (rod.brook@ontario.ca)
-	Kim Bennet (Kim.Bennett@ontario.ca)
-	Ken Abraham
+- Burntpoint
+	- Rod Brook (rod.brook@ontario.ca)
+	- Kim Bennet (Kim.Bennett@ontario.ca)
+	- Ken Abraham
 
-Bylot Island
-	Joël Bêty (joel_bety@uqar.ca)
-	Jean-Francois Lamarre (jflamarre@gmail.com)
+- Bylot Island
+	- Joël Bêty (joel_bety@uqar.ca)
+	- Jean-Francois Lamarre (jflamarre@gmail.com)
 
-Cape Krusenstern
-	Megan Boldenow (mboldenow@gmail.com)
+- Cape Krusenstern
+	- Megan Boldenow (mboldenow@gmail.com)
 
-Canning River
-	Stephen Brown (sbrown@manomet.org)
-	David Payer
+- Canning River
+	- Stephen Brown (sbrown@manomet.org)
+	- David Payer
 
 
-Chaun, Ikpikpuk, Prudhoe
-	Rebecca Bentzen (rbentzen@wcsc.org)
-	Steve Zack
-	Joe Liebezeit
-	Martin Robards
+- Chaun, Ikpikpuk, Prudhoe
+	- Rebecca Bentzen (rbentzen@wcsc.org)
+	- Steve Zack
+	- Joe Liebezeit
+	- Martin Robards
 	
-Churchill
-	Erica Nol (ericanol2000@gmail.com)
-	Nathan Senner (n.r.senner@rug.nl)
-	Andrew Johnson
-	Johanna Perz
-	Laura Koloski
-	Laura McKinnon
+- Churchill
+	- Erica Nol (ericanol2000@gmail.com)
+	- Nathan Senner (n.r.senner@rug.nl)
+	- Andrew Johnson
+	- Johanna Perz
+	- Laura Koloski
+	- Laura McKinnon
 	
-Coats Island
-	Paul Smith (PaulAllan.Smith@ec.gc.ca)
+- Coats Island
+	- Paul Smith (PaulAllan.Smith@ec.gc.ca)
 
-Colville
-	David Ward (dward@usgs.gov)
+- Colville
+	- David Ward (dward@usgs.gov)
 
-East Bay
-	Paul Smith (PaulAllan.Smith@ec.gc.ca)
-	Grant Gilchrist
+- East Bay
+	- Paul Smith (PaulAllan.Smith@ec.gc.ca)
+	- Grant Gilchrist
 
-Igloolik
-	Nicolas Lecomte (nicolas.lecomte@umoncton.ca)
-	Marie-Andrée Giroux (marie.a.giroux@gmail.com)
+- Igloolik
+	- Nicolas Lecomte (nicolas.lecomte@umoncton.ca)
+	- Marie-Andrée Giroux (marie.a.giroux@gmail.com)
 
-Lower Khatanga River
-	Mikhail Soloviev (mikhail-soloviev@yandex.ru)
+- Lower Khatanga River
+	- Mikhail Soloviev (mikhail-soloviev@yandex.ru)
 
-Mackenzie Delta
-	Jennie Rausch (jennie.rausch@ec.gc.ca)
-	Paul Woodard (paul.woodard@ec.gc.ca)
+- Mackenzie Delta
+	- Jennie Rausch (jennie.rausch@ec.gc.ca)
+	- Paul Woodard (paul.woodard@ec.gc.ca)
 
-Nome
-	Brett K. Sandercock (bsanderc@ksu.edu): study years 1993-1995, 2010-2014
-	David B. Lank (dlank@sfu.ca): study years 1996-1998, 2008-2013
-	Willow English (willowenglish1@gmail.com): primary contact for Red-necked Phalarope data.
-	Eunbi Kwon
-	Samantha Franks
-	Rick Lanctot
+- Nome
+	- Brett K. Sandercock (bsanderc@ksu.edu): study years 1993-1995, 2010-2014
+	- David B. Lank (dlank@sfu.ca): study years 1996-1998, 2008-2013
+	- Willow English (willowenglish1@gmail.com): primary contact for Red-necked Phalarope data.
+	- Eunbi Kwon
+	- Samantha Franks
+	- Rick Lanctot
 
 In addition to information that these authors might provide, it is likely that updates to the data will also be recorded at [Arctic Data Center](https://arcticdata.io), which hosts all of the data utilzed in this analysis. 
 
@@ -217,7 +217,7 @@ An up-to-date version of data from Barrow/Utqiagvik, including corrected and mor
 
 24200 observations/rows
 
-**3. Variable List: <list variable name(s), description(s), unit(s)and value labels as appropriate for each>**
+**3. Variable List:**
 
 | Variable  | Description |
 | ------------- | ------------- |
@@ -234,14 +234,16 @@ An up-to-date version of data from Barrow/Utqiagvik, including corrected and mor
 | `Notes`  | Any additional notes taken by the Observer at the time of data collection. |
 | `Total_cover_computed`  | The total amount of coverage on on a plot of snow, water, or land. This number should always be 100, as it is the sum of the Snow_cover, Water_cover, and Land_cover columns. This column was created to account for instances in the original data where the sum total was not 100. |
 | `Date2`  | The full date in which the data point was created, in day - month - year format, and accounting for instances where two dates were input onto one row. 
- |
 
 
-**4. Missing data codes: <list code/symbol and definition>**
+
+**4. Missing data codes:**
 
 In 'all_cover_fixed_JORGENSEN.csv', null values are all represented by NA.
 
 **5. Specialized formats or other abbreviations used:**
+
+All abbreviations used are noted in the variables table above.
 
 
 ## SHARING/ACCESS INFORMATION
