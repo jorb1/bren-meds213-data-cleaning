@@ -1,7 +1,8 @@
-# Cleaning the shorebird survey data 
+# Cleaning Shorebird Survey Data 
 
+## A project for [EDS 213](https://ucsb-library-research-data-services.github.io/bren-eds213/), coursework at the [Bren School of Environmental Science and Management](https://bren.ucsb.edu/)
 
-## The data set
+### The data set
 
 ARCTIC SHOREBIRD DEMOGRAPHICS NETWORK [https://doi.org/10.18739/A2222R68W](https://doi.org/10.18739/A2222R68W)
 
@@ -210,19 +211,44 @@ An up-to-date version of data from Barrow/Utqiagvik, including corrected and mor
 
 **1. Number of variables:**
 
+13 variables
+
 **2. Number of cases/rows:**
 
-
+24200 observations/rows
 
 **3. Variable List: <list variable name(s), description(s), unit(s)and value labels as appropriate for each>**
 
+| Variable  | Description |
+| ------------- | ------------- |
+| `Site` | The 4 letter abbreviation code used by the Arctic Shorebirds Demographics Network to denote the site location where data was collected.  |
+| `Year`  | The year in which the data point was collected. |
+| `Date`  | The full date in which the data point was collected, in the original format it was collected. |
+| `Plot`  | Name of study plot on which survey was conducted |
+| `Location`  | The year in which the data point was collected. |
+| `Snow_cover`  | Percent cover of snow, including slush |
+| `Water_cover`  | Percent cover of water |
+| `Land_cover`  | Percent cover of exposed land |
+| `Total_cover`  | The total amount of coverage on on a plot of snow, water, or land. This number should always be 100, as it is the sum of the Snow_cover, Water_cover, and Land_cover columns.  |
+| `Observer`  | The personnel abbreviation of the person who collected the data point. |
+| `Notes`  | Any additional notes taken by the Observer at the time of data collection. |
+| `Total_cover_computed`  | The total amount of coverage on on a plot of snow, water, or land. This number should always be 100, as it is the sum of the Snow_cover, Water_cover, and Land_cover columns. This column was created to account for instances in the original data where the sum total was not 100. |
+| `Date2`  | The full date in which the data point was created, in day - month - year format, and accounting for instances where two dates were input onto one row. 
+ |
+
+
 **4. Missing data codes: <list code/symbol and definition>**
 
+In 'all_cover_fixed_JORGENSEN.csv', null values are all represented by NA.
+
 **5. Specialized formats or other abbreviations used:**
+
 
 ## SHARING/ACCESS INFORMATION
 
 **1. Licenses/restrictions placed on the data:**
+
+This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
 
 **2. Links to publications that cite or use the data:**
 
@@ -254,19 +280,25 @@ Weiser, Emily L., et al. (2018). Effects of environmental conditions on reproduc
 
 Kwon, Eunbi, et al. (2017). Delayed egg‐laying and shortened incubation duration of Arctic‐breeding shorebirds coincide with climate cooling. Ecology and Evolution, 8, 1339–1351. [doi:10.1002/ece3.3733](doi:10.1002/ece3.3733)
 
-3. Links to other publicly accessible locations of the data:
+**3. Links to other publicly accessible locations of the data:**
 
-4. Links/relationships to ancillary data sets: <any supplementary data sources 
-that support analysis or classification of the datasets, eg., plant taxonomy table.)>
+No other locations known.
 
-The data used in this project is hosted at the [Arctic Data Center](https://arcticdata.io). 
+**4. Links/relationships to ancillary data sets:**
 
-5. Was data derived from another source? If yes, list source(s): <list citations 
-to original sources>
+See above for list of ancillary data sets related to the data used in this analysis. ASDN_Daily_species.csv and ASDN_Snow_survey.csv are the two files processed in the cleaning analysis performed in this repository.
+
+ASDN_Daily_species.csv has columns including Site and Observer. These columns are directly referencing these ancillary tables, specifically ASDN_Camp_staff.csv and ASDN_Bird_nests.csv.
+
+ASDN_Snow_survey.csv has columns including Site, Observer, and Plot. These columns are directly referencing these ancillary tables, specifically ASDN_Camp_staff.csv and ASDN_Bird_nests.csv.
+
+The tables mentioned here can be found at the [Arctic Data Center](https://arcticdata.io). 
+
+**5. Was data derived from another source? If yes, list source(s):** 
 
 Data was not derived from another source.
 
-6. Recommended citation for the project:
+**6. Recommended citation for the project:**
 
 When using the data and subsequent analysis for this project, the proper citation is: 
 
