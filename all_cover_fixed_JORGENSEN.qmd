@@ -141,6 +141,11 @@ all_cover_fixed <- all_cover_fixed |>
                                               Land_cover)), na.rm = TRUE))
 ```
 
+*Now, time to export our cleaned dataframe into the processed data folder. Hooray!*
+
+```{r}
+write_csv(all_cover_fixed, file.path("data", "processed", "all_cover_fixed_JORGENSEN.csv"))
+```
 
 
 
